@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var jsInit = function() {
+            return function() {
+                //动态设置像素比
+                var pixelRatio = 1 / window.devicePixelRatio;
+                var meta = document.createElement('meta');
+                meta.name = 'viewport';
+                meta.content = "width=device-width,initial-scale=" + pixelRatio + ",minimum-scale=" + pixelRatio + ",maximum-scale=" + pixelRatio + "";
+                document.head.appendChild(meta);
+                //设置html字体大小
+                var html = document.documentElement || document.body;
+                var htmlWidth = html.getBoundingClientRect().width;
+                html.style.fontSize = htmlWidth / 15 + 'px';
+            }
+        }();
+        window.onload = window.onresize = function() {
+            jsInit()
+        };
+    </script>
+</head>
+
+<body>
+    <!--顶部开始-->
+    <div id="header">
+        <div class="header-left">
+            <a href="javascript:;">
+                <i class="iconfont icon-saoyisao"></i>
+                <p>扫一扫</p>
+            </a>
+        </div>
+        <div class="header-center">
+            <div class="search-wrap">
+                <a href="javascript:;">
+                    <i class="iconfont icon-sousuo5"></i>
+                    <span>搜索商品名称</span>
+                </a>
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="javascript:;">
+                <i class="iconfont icon-leimupinleifenleileibie"></i>
+                <p>分类</p>
+            </a>
+        </div>
+    </div>
+    <!--顶部结束-->
+    <!--banner开始-->
+    <div class="banner">
+        <div class="swiper-container bannermove">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="javascript:;"><img src="../dist/images/gg1.jpg" /></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="javascript:;"><img src="../dist/images/hh1.jpg" /></a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!--banner结束-->
+    <!-- 四图标开始 -->
+    <div class="four-icon-wrap">
+        <dl>
+            <dt><img src="../dist/images/j.jpg" alt=""></dt>
+            <dd>京东巨惠</dd>
+        </dl>
+        <dl>
+            <dt><img src="../dist/images/z.jpg" alt=""></dt>
+            <dd>正品品质</dd>
+        </dl>
+        <dl>
+            <dt><img src="../dist/images/s.jpg" alt=""></dt>
+            <dd>低价狂欢</dd>
+        </dl>
+        <dl>
+            <dt><img src="../dist/images/h.jpg" alt=""></dt>
+            <dd>本村专享</dd>
+        </dl>
+    </div>
+    <!-- 四图标开始 -->
+    <!-- 爆款开始 -->
+    <div class="bao-wrap clearfix">
+        <div class="module-title">
+            <h2>爆款推荐<span>来挑点好的</span></h2>
+        </div>
+        <div class="bao-con">
+            <div class="bao-con-left fl">
+                <a href="javascript:;">
+                    <img src="../dist/images/gg2.jpg" alt="">
+                </a>
+            </div>
+            <div class="bao-con-right fr">
+                <a href="javascript:;">
+                    <img src="../dist/images/gg3.jpg" alt="">
+                </a>
+                <a href="javascript:;">
+                    <img src="../dist/images/gg4.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- 爆款结束 -->
+
+    <!--特惠推荐开始-->
+    <div class="bao-wrap clearfix">
+        <div class="module-title">
+            <h2>特惠推荐<span>让你想剁手的低价</span></h2>
+        </div>
+        <div class="tehui-con boxshadow">
+            <div class="swiper-container tehuibannermove">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="javascript:;"><img src="../dist/images/gg5.jpg" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:;"><img src="../dist/images/gg6.jpg" /></a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="tehui-sp-wrap">
+                <a href="javascript:;">
+                    <img src="../dist/images/sp1.jpg" alt="">
+                    <div>
+                        <p class="aui-ellipsis-1">修正红豆薏米茶祛湿除口气苦荞大麦茶薏仁芡实茶赤小豆薏仁茶祛除茶湿热茶去湿气男女人茶包 150g</p>
+                        <strong><span>&yen;</span>200</strong>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <img src="../dist/images/sp2.jpg" alt="">
+                    <div>
+                        <p class="aui-ellipsis-1">修正红豆薏米茶祛湿除口气苦荞大麦茶薏仁芡实茶赤小豆薏仁茶祛除茶湿热茶去湿气男女人茶包 150g</p>
+                        <strong><span>&yen;</span>200</strong>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <img src="../dist/images/sp3.jpg" alt="">
+                    <div>
+                        <p class="aui-ellipsis-1">修正红豆薏米茶祛湿除口气苦荞大麦茶薏仁芡实茶赤小豆薏仁茶祛除茶湿热茶去湿气男女人茶包 150g</p>
+                        <strong><span>&yen;</span>200</strong>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <img src="../dist/images/sp4.jpg" alt="">
+                    <div>
+                        <p class="aui-ellipsis-1">修正红豆薏米茶祛湿除口气苦荞大麦茶薏仁芡实茶赤小豆薏仁茶祛除茶湿热茶去湿气男女人茶包 150g</p>
+                        <strong><span>&yen;</span>200</strong>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <img src="../dist/images/sp5.jpg" alt="">
+                    <div>
+                        <p class="aui-ellipsis-1">修正红豆薏米茶祛湿除口气苦荞大麦茶薏仁芡实茶赤小豆薏仁茶祛除茶湿热茶去湿气男女人茶包 150g</p>
+                        <strong><span>&yen;</span>200</strong>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <img src="../dist/images/sp6.jpg" alt="">
+                    <div>
+                        <p class="aui-ellipsis-1">修正红豆薏米茶祛湿除口气苦荞大麦茶薏仁芡实茶赤小豆薏仁茶祛除茶湿热茶去湿气男女人茶包 150g</p>
+                        <strong><span>&yen;</span>200</strong>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--特惠推荐结束-->
+
+    <!--京东好货开始-->
+    <div class="bao-wrap clearfix">
+        <div class="module-title">
+            <h2>京东好货热销<span>来自京东 惠于京东</span></h2>
+        </div>
+        <div class="tehui-con boxshadow">
+            <div class="swiper-container tehuibannermove">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="javascript:;"><img src="../dist/images/gg5.jpg" /></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:;"><img src="../dist/images/gg6.jpg" /></a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="tehui-sp-wrap">
+                <a href="javascript:;">
+                    <img src="../dist/images/sp1.jpg" alt="">
+                    <div>
+                        <p class="aui-ellipsis-1">修正红豆薏米茶祛湿除口气苦荞大麦茶薏仁芡实茶赤小豆薏仁茶祛除茶湿热茶去湿气男女人茶包 150g</p>
+                        <strong><span>&yen;</span>200</strong>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <img src="../dist/images/sp2.jpg" alt="">
+                    <div>
+                        <p class="aui-ellipsis-1">修正红豆薏米茶祛湿除口气苦荞大麦茶薏仁芡实茶赤小豆薏仁茶祛除茶湿热茶去湿气男女人茶包 150g</p>
+                        <strong><span>&yen;</span>200</strong>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <img src="../dist/images/sp3.jpg" alt="">
+                    <div>
+                        <p class="aui-ellipsis-1">修正红豆薏米茶祛湿除口气苦荞大麦茶薏仁芡实茶赤小豆薏仁茶祛除茶湿热茶去湿气男女人茶包 150g</p>
+                        <strong><span>&yen;</span>200</strong>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <img src="../dist/images/sp4.jpg" alt="">
+                    <div>
+                        <p class="aui-ellipsis-1">修正红豆薏米茶祛湿除口气苦荞大麦茶薏仁芡实茶赤小豆薏仁茶祛除茶湿热茶去湿气男女人茶包 150g</p>
+                        <strong><span>&yen;</span>200</strong>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <img src="../dist/images/sp5.jpg" alt="">
+                    <div>
+                        <p class="aui-ellipsis-1">修正红豆薏米茶祛湿除口气苦荞大麦茶薏仁芡实茶赤小豆薏仁茶祛除茶湿热茶去湿气男女人茶包 150g</p>
+                        <strong><span>&yen;</span>200</strong>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <img src="../dist/images/sp6.jpg" alt="">
+                    <div>
+                        <p class="aui-ellipsis-1">修正红豆薏米茶祛湿除口气苦荞大麦茶薏仁芡实茶赤小豆薏仁茶祛除茶湿热茶去湿气男女人茶包 150g</p>
+                        <strong><span>&yen;</span>200</strong>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--京东好货结束-->
+
+    <!--更多专属优惠开始-->
+    <div class="bao-wrap clearfix">
+        <div class="module-title">
+            <h2>更多专属优惠<span>本村专属 优惠拿到手软</span></h2>
+        </div>
+        <div class="zhuanshu-con">
+            <div class="zhuanshu-sp-wrap">
+                <a href="javascript:;">
+                    <img src="../dist/images/sp1.jpg" alt="">
+                    <div>
+                        <p class="aui-ellipsis-2">修正红豆薏米茶祛湿除口气苦荞大麦茶薏仁芡实茶赤小豆薏仁茶祛除茶湿热茶去湿气男女人茶包 150g</p>
+                        <strong><span>&yen;</span>200</strong>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <img src="../dist/images/sp2.jpg" alt="">
+                    <div>
+                        <p class="aui-ellipsis-2">修正红豆薏米茶祛湿除口气苦荞大麦茶薏仁芡实茶赤小豆薏仁茶祛除茶湿热茶去湿气男女人茶包 150g</p>
+                        <strong><span>&yen;</span>200</strong>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <img src="../dist/images/sp3.jpg" alt="">
+                    <div>
+                        <p class="aui-ellipsis-2">修正红豆薏米茶祛湿除口气苦荞大麦茶薏仁芡实茶赤小豆薏仁茶祛除茶湿热茶去湿气男女人茶包 150g</p>
+                        <strong><span>&yen;</span>200</strong>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <img src="../dist/images/sp4.jpg" alt="">
+                    <div>
+                        <p class="aui-ellipsis-2">修正红豆薏米茶祛湿除口气苦荞大麦茶薏仁芡实茶赤小豆薏仁茶祛除茶湿热茶去湿气男女人茶包 150g</p>
+                        <strong><span>&yen;</span>200</strong>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <img src="../dist/images/sp5.jpg" alt="">
+                    <div>
+                        <p class="aui-ellipsis-2">修正红豆薏米茶祛湿除口气苦荞大麦茶薏仁芡实茶赤小豆薏仁茶祛除茶湿热茶去湿气男女人茶包 150g</p>
+                        <strong><span>&yen;</span>200</strong>
+                    </div>
+                </a>
+                <a href="javascript:;">
+                    <img src="../dist/images/sp6.jpg" alt="">
+                    <div>
+                        <p class="aui-ellipsis-2">修正红豆薏米茶祛湿除口气苦荞大麦茶薏仁芡实茶赤小豆薏仁茶祛除茶湿热茶去湿气男女人茶包 150g</p>
+                        <strong><span>&yen;</span>200</strong>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--更多专属优惠结束-->
+    <!--返回顶部-->
+    <a id="gotop" href="javascript:;"><img src="../dist/images/go_top.png" alt=""></a>
+    <!--占位开始-->
+    <div class="zhanwei120"></div>
+    <!--底部开始-->
+    <div id="footer">
+        <a href="javascript:;">
+            <i class="iconfont icon-diqiu"></i>
+            <p>村门户</p>
+        </a>
+        <a href="javascript:;" class="footer-active">
+            <i class="iconfont icon-store_icon"></i>
+            <p>商城</p>
+        </a>
+        <a href="javascript:;">
+            <strong>
+            <i class="iconfont icon-jia-yuankuang"></i>
+        </strong>
+        </a>
+        <a href="javascript:;">
+            <i class="iconfont icon-shitiguanxi"></i>
+            <p>人脉</p>
+        </a>
+        <a href="javascript:;">
+            <i class="iconfont icon-wode"></i>
+            <p>我的</p>
+        </a>
+    </div>
+    <!--底部结束-->
+    <script src="../dist/index.bundle.js"></script>
+</body>
+</html>
