@@ -2,15 +2,14 @@ var common = (function(){
     //返回顶部
     function returnTop(){
         var returnBtn = utils.getByClass('returntop')[0];
-        var documentBox = document.documentElement || document.body;
-        var cHeight = documentBox.clientHeight;
+        var cHeight = document.documentElement.clientHeight || document.body.clientHeight;
         var offsetTop = 0;
         var timer = null;
 
         window.onscroll = showBtn;
 
         function showBtn(){
-            offsetTop = documentBox.scrollTop;
+            offsetTop = document.documentElement.scrollTop || document.body.scrollTop;
             if( offsetTop > 300 ){
                 returnBtn.style.display = 'block';
             }else{
@@ -22,7 +21,7 @@ var common = (function(){
             this.style.display = 'none';
             window.onscroll = null;
             timer = setInterval(function(){
-                var sTop = documentBox.scrollTop;
+                var sTop = document.documentElement.scrollTop || document.body.scrollTop;
                 var speed = Math.floor((-sTop)/10);
                 if(sTop == 0){
                     clearInterval(timer);
