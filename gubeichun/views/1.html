@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        .btn:hover{
+            background: blue;
+        }
+        .btn{
+            display: none;
+            height: 40px;
+            width: 40px;
+            background: red;
+            position: fixed;
+            left: 1410px;
+            top: 600px;
+        }
+        .image{
+            width: 1190px;
+            margin:0 auto;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function(){
+            var myBtn = document.getElementsByClassName("btn");
+            var clientHeight = document.documentElement.clientHeight;
+            var timer = null;
+
+            window.onscroll = function(){
+                var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+                if(osTop > clientHeight){
+                    myBtn[0].style.display = "block";
+                }
+                else{
+                    myBtn[0].style.display = "none";
+                }
+            }
+            myBtn[0].onclick = function(){
+                clearInterval(timer);
+                timer = setInterval(function(){
+                    var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+                    var spd = Math.floor((-osTop) / 10);
+
+                    document.documentElement.scrollTop = osTop + spd;
+                    document.body.scrollTop = osTop + spd;
+
+                    if(osTop == 0){
+                        clearInterval(timer);
+                    }
+                },30);
+            }
+        }
+    </script>
+</head>
+<body>
+<a href="javascript:;" class="btn">按钮</a>
+<div class="image" style="height: 3000px">
+    1111
+</div>
+</body>
+</html>
